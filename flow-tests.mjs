@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {initial,apply,advance} from './dist/engine.mjs';
+import {flowFor} from './dist/flow.mjs';
+const s=initial();assert.equal(flowFor(s).phase,'choose');assert.equal(flowFor(s).button,null);
+apply(s,2,'cover');apply(s,2,'notill');assert.equal(s.actions,1);assert.equal(flowFor(s).phase,'choose');assert.ok(flowFor(s).instruction.includes('mais 1 manejo'));
+apply(s,2,'crop_rotation');assert.equal(s.actions,0);assert.equal(flowFor(s).phase,'advance');assert.equal(flowFor(s).canPick,false);
+advance(s);assert.equal(flowFor(s).phase,'choose');assert.equal(s.actions,3);
+const noBudget=initial();noBudget.budget=0;assert.equal(flowFor(noBudget).phase,'advance');
+const ended=initial();for(let i=0;i<6;i++)advance(ended);assert.equal(flowFor(ended).phase,'finished');assert.equal(flowFor(ended).button,'Ver balanço final');
+console.log('PASS: start, last remaining choice, exhausted work, next cycle, exhausted budget and final result each have one next step.');

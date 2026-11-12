@@ -1,0 +1,11 @@
+{
+  "name": "paisagem-viva",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Jogo de manejo da paisagem e serviços ecossistêmicos, idealizado por Ernandes Sobreira Oliveira Junior.",
+  "author": "Ernandes Sobreira Oliveira Junior",
+  "scripts": {
+    "test": "node tests.mjs && node visual-tests.mjs && node flow-tests.mjs"
+  }
+}
