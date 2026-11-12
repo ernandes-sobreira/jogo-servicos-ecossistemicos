@@ -45,7 +45,7 @@ npm test
 
 ## Hospedagem e privacidade
 
-Este repositório contém o código, as imagens e os testes da versão do jogo. A hospedagem atual em Sites permanece privada: https://ecologia-paisagem-viva-profbio.ernandes-sobreira.chatgpt.site. Este envio não ativa GitHub Pages nem altera o acesso ao site.
+Este repositório contém o código, as imagens e os testes da versão do jogo. A hospedagem atual em Sites permanece privada: https://ecologia-paisagem-viva-profbio.ernandes-sobreira.chatgpt.site. O GitHub Pages foi ativado na configuração do repositório e já oferece uma cópia pública. Sua página inicial encaminha diretamente para o jogo em `dist/`: https://ernandes-sobreira.github.io/jogo-servicos-ecossistemicos/. A versão em Sites mantém seu acesso privado, independente do GitHub Pages.
 
 ## Idealização
 
